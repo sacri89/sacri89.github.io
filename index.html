@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Espacios Liminales en Panamá</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Proyecto visual sobre espacios liminales en Panamá: centros comerciales vacíos, corredores, estaciones y lugares que se sienten fuera del tiempo." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #05060a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2.5rem 1.5rem;
+      background: radial-gradient(circle at top, #1a2635 0, #05060a 60%);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 2.4rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      margin-top: 0.75rem;
+      max-width: 640px;
+      font-size: 0.98rem;
+      color: #d0d4dd;
+    }
+
+    nav {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #f5f5f5;
+      opacity: 0.9;
+      transition: background 0.2s ease, opacity 0.2s ease, transform 0.1s ease;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c7d0ff;
+    }
+
+    p {
+      font-size: 0.98rem;
+      color: #e3e6f0;
+      margin-bottom: 0.6rem;
+    }
+
+    .highlight {
+      color: #f5f5f5;
+      font-weight: 500;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      border-radius: 0.9rem;
+      padding: 1rem;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #f5f5f5;
+    }
+
+    .card small {
+      display: block;
+      font-size: 0.78rem;
+      color: #a7afc2;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #cfd6ff;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-item {
+      border-radius: 0.9rem;
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+      padding: 0.9rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #c3c7d5;
+      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.6));
+    }
+
+    .gallery-item span {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: #9ca3b8;
+    }
+
+    .timeline {
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
+      padding-left: 1.1rem;
+      margin-top: 0.7rem;
+    }
+
+    .timeline-step {
+      margin-bottom: 0.7rem;
+      position: relative;
+    }
+
+    .timeline-step::before {
+      content: "";
+      position: absolute;
+      left: -1.3rem;
+      top: 0.25rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #c7d0ff;
+    }
+
+    .timeline-step strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.1rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem 1.5rem 1.5rem;
+      font-size: 0.8rem;
+      color: #9ea4b7;
+      text-align: center;
+    }
+
+    a.plain-link {
+      color: #c7d0ff;
+      text-decoration: none;
+    }
+
+    a.plain-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="title">Espacios Liminales en Panamá</h1>
+      <p class="subtitle">
+        Un recorrido personal por centros comerciales casi vacíos, pasillos interminables, estaciones silenciosas y
+        otros lugares de Panamá que se sienten fuera del tiempo, entre lo conocido y lo desconocido.
+      </p>
+      <nav>
+        <a href="#intro">Inicio</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#galeria">Galería</a>
+        <a href="#proyecto">Sobre el proyecto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- INICIO -->
+      <section id="intro">
+        <h2>Inicio</h2>
+        <p>
+          Este sitio es un pequeño archivo de <span class="highlight">espacios liminales en Panamá</span>. No se trata solo de
+          lugares vacíos sino de momentos raros en los que una escalera, un pasillo o una tienda cerrada se sienten
+          como si pertenecieran a otro mundo.
+        </p>
+        <p>
+          La idea es documentar cómo se ven estos espacios y también cómo se sienten. Muchos están llenos de luces,
+          anuncios y colores pero aun así transmiten silencio, espera o algo que no sabemos nombrar.
+        </p>
+      </section>
+
+      <!-- LUGARES -->
+      <section id="lugares">
+        <h2>Lugares</h2>
+        <p>
+          Algunos de los puntos que se vuelven liminales dependen de la hora, la luz y la cantidad de gente. Aquí se
+          listan algunos lugares de Panamá que se transforman cuando casi no hay movimiento.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Albrook Mall</h3>
+            <small>Albrook, Ciudad de Panamá</small>
+            <p>
+              Pasillos largos, techos altos y entradas de tiendas cerradas al final del día. Cuando las luces siguen
+              encendidas pero casi no hay personas, el centro comercial se siente como un escenario detenido.
+            </p>
+            <span class="tag">Centro comercial</span>
+          </article>
+
+          <article class="card">
+            <h3>Multicentro</h3>
+            <small>Avenida Balboa</small>
+            <p>
+              Escaleras mecánicas, pisos vacíos y locales poco ocupados crean una atmósfera extraña en ciertas horas.
+              El sonido del aire acondicionado domina el ambiente.
+            </p>
+            <span class="tag">Arquitectura semivacía</span>
+          </article>
+
+          <article class="card">
+            <h3>Megamall</h3>
+            <small>24 de Diciembre</small>
+            <p>
+              Amplios corredores con muy pocas personas, especialmente entre semana. Las luces blancas y los anuncios
+              encendidos refuerzan la sensación de lugar de tránsito permanente.
+            </p>
+            <span class="tag">Zona de paso</span>
+          </article>
+
+          <article class="card">
+            <h3>Plaza Conquistador</h3>
+            <small>Vía España</small>
+            <p>
+              Una plaza con locales silenciosos y corredores exteriores que de noche pueden sentirse aislados, como si
+              el resto de la ciudad estuviera muy lejos.
+            </p>
+            <span class="tag">Plaza urbana</span>
+          </article>
+
+          <article class="card">
+            <h3>Estaciones del Metro</h3>
+            <small>Varios puntos, Ciudad de Panamá</small>
+            <p>
+              Andenes casi vacíos muy temprano o muy tarde, con anuncios encendidos y vagones que pasan de vez en
+              cuando. La mezcla de eco y luz fría crea un ambiente muy liminal.
+            </p>
+            <span class="tag">Transporte</span>
+          </article>
+
+          <article class="card">
+            <h3>Pasillos y sótanos de edificios</h3>
+            <small>Diversos lugares</small>
+            <p>
+              Corredores de servicio, estacionamientos y zonas de carga que normalmente nadie mira pero que se sienten
+              llenos de historias posibles cuando están vacíos.
+            </p>
+            <span class="tag">Zonas técnicas</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section id="galeria">
+        <h2>Galería</h2>
+        <p>
+          Aquí puedes ir colocando tus fotos. Solo tienes que reemplazar los cuadros de ejemplo por imágenes reales de
+          los lugares que visites.
+        </p>
+
+        <!--
+          Para usar imágenes reales:
+          1. Sube tus fotos a la carpeta del repositorio (por ejemplo: img/albrook1.jpg).
+          2. Reemplaza el texto "Arrastra aquí tu foto de..." por una etiqueta <img>.
+          Ejemplo:
+          <img src="img/albrook1.jpg" alt="Pasillo vacío en Albrook Mall" style="width:100%;border-radius:0.6rem;" />
+        -->
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            Arrastra aquí tu primera foto de pasillos vacíos en Albrook Mall.
+            <span>Ejemplo: pasillo largo, casi sin personas.</span>
+          </div>
+          <div class="gallery-item">
+            Arrastra aquí una foto de Multicentro en una hora silenciosa.
+            <span>Escaleras mecánicas detenidas o casi vacías.</span>
+          </div>
+          <div class="gallery-item">
+            Arrastra aquí una foto de estaciones del Metro de Panamá.
+            <span>Andén vacío, luces frías, señalización encendida.</span>
+          </div>
+          <div class="gallery-item">
+            Arrastra aquí una foto de estacionamientos o pasillos traseros.
+            <span>Puertas de servicio, muros de concreto, señales de salida.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE EL PROYECTO -->
+      <section id="proyecto">
+        <h2>Sobre el proyecto</h2>
+        <p>
+          Este sitio está pensado como un proyecto personal sobre cómo se sienten ciertos lugares de Panamá cuando se
+          quedan casi vacíos. No es un catálogo turístico, es más bien un diario visual sobre esos momentos en los que
+          la ciudad parece otra.
+        </p>
+        <p>
+          La intención es registrar fotos, impresiones y pequeñas descripciones. Con el tiempo se puede agregar
+          información técnica, mapas o incluso testimonios de otras personas que ven estos espacios de forma similar.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-step">
+            <strong>1. Observación</strong>
+            <span>Recorrer centros comerciales, estaciones, plazas y estacionamientos en diferentes horarios.</span>
+          </div>
+          <div class="timeline-step">
+            <strong>2. Registro</strong>
+            <span>Tomar fotografías y anotar cómo se siente el lugar en ese momento.</span>
+          </div>
+          <div class="timeline-step">
+            <strong>3. Selección</strong>
+            <span>Elegir imágenes que transmitan mejor la sensación de espacio liminal.</span>
+          </div>
+          <div class="timeline-step">
+            <strong>4. Publicación</strong>
+            <span>Subir el material al sitio y organizarlo por zonas o tipos de espacio.</span>
+          </div>
+        </div>
+
+        <p style="margin-top:0.9rem;">
+          El sitio está hospedado en GitHub Pages, lo que permite tener <span class="highlight">HTTPS gratuito</span> y
+          mantener el proyecto accesible mientras sigue en construcción.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Proyecto personal sobre espacios liminales en Panamá · Desarrollado con
+    <a href="https://pages.github.com/" class="plain-link" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+  </footer>
+</body>
+</html>
